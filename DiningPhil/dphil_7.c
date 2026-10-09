@@ -17,6 +17,11 @@
 #define HUNGRY 1
 #define EATING 2
 
+/* 
+ * This struct is the global state across all the
+ * philosophers rather than per philosopher. 
+ */
+
 typedef struct {
   pthread_mutex_t *mon;
   pthread_cond_t *cv[MAXTHREADS];
